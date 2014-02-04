@@ -22,6 +22,7 @@
             min: 1
             max: 100
             value: 15
+            size: (50, 0) if root.width > root.height else (0, 50)
             size_hint: (None, 1) if root.width > root.height else (1, None)
         TextInput:
             id: saywhat_text
