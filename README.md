@@ -1,4 +1,4 @@
-# saythis #
+# Say This #
 
 An Android or Desktop app that uses your platform's text to speech engine 
 to speak what you've typed. This project is developed with Kivy and Plyer. 
