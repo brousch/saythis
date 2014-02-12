@@ -66,7 +66,7 @@ fullscreen = True
 # (str) Android NDK version to use
 #android.ndk = 9
 
-android.private_storage = False
+android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
 #android.ndk_path =
