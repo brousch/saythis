@@ -3,8 +3,9 @@ from kivy.tools.packaging.pyinstaller_hooks import install_hooks
 install_hooks(globals())
 
 a = Analysis(['saythis/main.py'],
-             pathex=['/home/brousch/Projects/saythis'],
-             hiddenimports=['plyer.platforms.linux.tts'],
+             pathex=['./'],
+             hiddenimports=['plyer.platforms.linux.tts',
+                            'plyer.platforms.win.tts'],
              runtime_hooks=None)
 pyz = PYZ(a.pure)
 exe = EXE(pyz,
