@@ -11,7 +11,7 @@ pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
           exclude_binaries=True,
-          name='main',
+          name='saythis.exe',
           debug=False,
           strip=None,
           upx=True,
