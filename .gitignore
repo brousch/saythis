@@ -6,3 +6,5 @@ bin
 build
 dist
 venv
+*.komodoproject
+
