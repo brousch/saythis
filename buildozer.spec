@@ -19,7 +19,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests
+#source.exclude_dirs = tests, bin
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
@@ -29,10 +29,10 @@ version.regex = __version__ = '(.*)'
 version.filename = %(source.dir)s/main.py
 
 # (str) Application versioning (method 2)
-#version = 1.1.6
+# version = 1.2.0
 
 # (list) Application requirements
-requirements = kivy==master,plyer
+requirements = plyer,kivy
 
 # (str) Presplash of the application
 presplash.filename = %(source.dir)s/resources/presplash.jpg
@@ -64,8 +64,9 @@ fullscreen = True
 #android.sdk = 21
 
 # (str) Android NDK version to use
-#android.ndk = 9
+android.ndk = 9c
 
+# (bool) Use --private data storage (True) or --dir public storage (False)
 android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
@@ -73,6 +74,9 @@ android.private_storage = True
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path = 
+
+# (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
+#android.p4a_dir =
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.renpy.android.PythonActivity
@@ -82,6 +86,10 @@ android.private_storage = True
 # down the build process. Allows wildcards matching, for example:
 # OUYA-ODK/libs/*.jar
 #android.add_jars = foo.jar,bar.jar,path/to/more/*.jar
+
+# (list) List of Java files to add to the android project (can be java or a
+# directory containing the files)
+#android.add_src =
 
 # (str) python-for-android branch to use, if not master, useful to try
 # not yet merged features.
@@ -103,6 +111,13 @@ android.private_storage = True
 # (bool) Indicate whether the screen should stay on
 # Don't forget to add the WAKE_LOCK permission if you set this to True
 #android.wakelock = False
+
+# (list) Android application meta-data to set (key=value format)
+#android.meta_data =
+
+# (list) Android library project to add (will be added in the
+# project.properties automatically.)
+#android.library_references =
 
 #
 # iOS specific

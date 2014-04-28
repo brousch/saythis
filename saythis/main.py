@@ -10,7 +10,7 @@ from kivy.uix.popup import Popup
 
 from plyer import tts
 
-__version__ = '1.1.10'
+__version__ = '1.1.11'
 
 
 class SayThis(BoxLayout):
@@ -30,10 +30,17 @@ class SayThis(BoxLayout):
         self.saywhat_text.text = ""
         self.saywhat_text.focus = True
 
+
 class SayThisApp(App):
     def build(self):
         return SayThis()
-    
+
+    def on_pause(self):
+        return True
+
+    def on_resume(self):
+        pass 
+
 
 if __name__ == '__main__':
     SayThisApp().run()
