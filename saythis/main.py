@@ -10,7 +10,7 @@ from kivy.uix.popup import Popup
 
 from plyer import tts
 
-__version__ = '1.1.11'
+__version__ = '1.1.12'
 
 
 class SayThis(BoxLayout):
