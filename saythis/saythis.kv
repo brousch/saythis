@@ -1,4 +1,7 @@
 #:kivy 1.7.1
+
+#: import window kivy.core.window.Window
+
 <SayThis>:
     orientation: 'vertical'
     button_font_size: '30sp'
@@ -15,15 +18,15 @@
         size_hint: 1, None
         height: self.texture_size[1] + (2 * root.padding[1])
     BoxLayout:
-        orientation: 'horizontal' if root.width > root.height else 'vertical'
+        orientation: 'horizontal' if window.width > window.height else 'vertical'
         Slider:
             id: font_slider
-            orientation: 'vertical' if root.width > root.height else 'horizontal'
+            orientation: 'vertical' if window.width > window.height else 'horizontal'
             min: 1
             max: 100
             value: 15
-            size: ('50sp', 0) if root.width > root.height else (0, '50sp')
-            size_hint: (None, 1) if root.width > root.height else (1, None)
+            size: ('50sp', 0) if window.width > window.height else (0, '50sp')
+            size_hint: (None, 1) if window.width > window.height else (1, None)
         TextInput:
             id: saywhat_text
             text: 'Hello, world!'
